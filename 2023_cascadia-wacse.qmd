@@ -1,6 +1,6 @@
 ---
 title: "Shiny optimization of climate benefits from a statewide agricultural grant program"
-author: "<br><br><strong>Jadey Ryan</strong><br>Leslie Michel & Dani Gelardi<br>August 19, 2023"
+author: "<br><br><strong>Jadey Ryan</strong><br>Leslie Michel & Dani Gelardi<br>Cascadia R Conf | August 19, 2023"
 title-slide-attributes: 
   data-background-image: images/logo-wacse.png, images/logo-cascadia.png
   data-background-repeat: no-repeat
@@ -16,6 +16,7 @@ format:
     footer: "[https://wsda.shinyapps.io/WaCSE/](https://wsda.shinyapps.io/WaCSE/)"
     link-external-newwindow: true
     slide-number: c/t
+    embed-resources: true
 from: markdown+emoji
 ---
 
