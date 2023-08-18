@@ -1,0 +1,87 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+// font family
+$font-family-sans-serif: 'Lato', Arial, sans-serif !default;
+$presentation-heading-font: 'Bree Serif', Times New Roman, serif !default;
+$font-family-monospace: 'Source Code Pro', monospace !default;
+
+// font size
+$presentation-heading-font-weight: 500;
+$presentation-h1-font-size: 2.6em;
+$presentation-h2-font-size: 1.7em;
+$presentation-h3-font-size: 1.4em;
+$presentation-h4-font-size: 1.1em;
+$presentation-font-size-root: 40px;
+$presentation-line-height: 1.5em;
+
+// font color
+$presentation-heading-color: #558B71 !default;
+
+// code
+$code-block-font-size: 0.7em;
+$code-block-border-color: #365949;
+$code-block-bg: #ffffff;
+
+// bg colours
+$body-color: #17261F;
+$link-color: #558B71;
+$link-color-hover: darken( $link-color, 15% );
+$body-bg: #F2F7F5;
+
+/*-- scss:rules --*/
+
+section.has-dark-background a, section.has-dark-background a:hover {
+  color: $body-bg;
+}
+
+figure>figcaption {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.reveal .footer {
+  color: #558B71;
+  font-family: $font-family-sans-serif;
+  padding-bottom: 25px;
+}
+
+.reveal .slide-logo {
+  right: 12px;
+  padding-bottom: 20px !important;
+  max-height: 70px !important;
+  z-index: 1;
+}
+
+.reveal .slide-menu-button {
+    left: 100px;
+    top: 30px;
+    padding-left: 20px;
+    color: #365949;
+  }
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #365949;
+  height: 2%;
+}
+
+.reveal .slide-number {
+  color: #365949;
+}
+
+.fas, .fa-solid {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #365949;
+}
+
+.fab, .fa-brands {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    color: #365949;
+}

@@ -1,0 +1,205 @@
+---
+title: "Shiny optimization of climate benefits from a statewide agricultural grant program"
+author: "<br><br><strong>Jadey Ryan</strong><br>Leslie Michel & Dani Gelardi<br>August 19, 2023"
+title-slide-attributes: 
+  data-background-image: images/logo-wacse.png, images/logo-cascadia.png
+  data-background-repeat: no-repeat
+  data-background-position: 15% 90%, 85% 90%
+  data-background-size: 17%, 17%
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    theme: "style.scss"
+    highlight-style: gruvbox
+    logo: images/logo-wsda-color.png
+    footer: "[https://wsda.shinyapps.io/WaCSE/](https://wsda.shinyapps.io/WaCSE/)"
+    link-external-newwindow: true
+    slide-number: c/t
+from: markdown+emoji
+---
+
+## Washington's Sustainable Farms & Fields Program incentivizes climate-smart practices. {style="margin-top: 15%" background-color="black" background-image="images/no-till-drill-SJICD.jpeg" background-size="cover" background-opacity="0.5"}
+
+<br>
+
+::: {style="text-align:right; font-size:1.1em"}
+\$1.8 million in FY23
+
+\$1.5 million in FY24
+:::
+
+<br><br><br> [Photo: San Juan Island Conservation District]{style="font-size:70%"}
+
+## Benefits from climate-smart practices vary widely.
+
+![Photo: Molly McIlquham](images/soils.png){fig-align="left" fig-alt="More than 50 soil samples taken from different agricultural fields across Washington State. Each sample has a different color and texture, showcasing how diverse soils are."}
+
+. . .
+
+We needed a decision-support tool to identify projects with the greatest climate benefits.
+
+## Models and tools for on-farm carbon and GHG accounting already exist.
+
+<br>
+
+[![](images/comet-farm.png){fig-align="left" width="100%" fig-alt="COMET Farm website header that lists US Department of Agriculture Natural Resources Conservation Service and Colorado State University logos."}](https://comet-farm.com/)
+
+. . .
+
+Too hard to use!
+
+. . .
+
+[![](images/comet-planner.png){fig-align="left" width="100%" fig-alt="COMET Planner website header that lists US Department of Agriculture Natural Resources Conservation Service and Colorado State University logos."}](http://comet-planner.com/)
+
+. . .
+
+Too limited!
+
+. . .
+
+## Our wishlist :bookmark_tabs:
+
+<br>
+
+::: columns
+::: {.column width="70%"}
+{{< fa user-group size=xl >}} User-friendly for grant applicants and the public
+
+<br>
+
+[{{< fa scale-unbalanced size=xl >}} Interactively compare conservation practices]{.fragment}
+
+<br>
+
+[{{< fa lightbulb size=xl >}} Convert CO~2~eq estimates into familiar terms]{.fragment}
+
+<br>
+
+[{{< fa download size=xl >}} Downloadable spreadsheets and reports]{.fragment}
+:::
+
+::: {.column width="30%"}
+[![Washington Climate Smart Estimator](images/logo-wacse.png){fig-align="right"}](https://wsda.shinyapps.io/WaCSE/)
+:::
+:::
+
+## Demo :movie_camera:
+
+{{< video https://www.youtube.com/embed/TG_Bhgx_e-Y title="WaCSE Demo Video" width="1400" height="700" >}}
+
+## Study Shiny :nerd_face::books:
+
+Start with examples and big picture workflows.
+
+::: columns
+::: {.column width="42%"}
+[![Posit Shiny Gallery](images/shiny-gallery.png){height="500" fig-align="left" fig-alt="Screenshot of Posit's R Shiny Gallery."}](https://shiny.posit.co/r/gallery/)
+:::
+
+::: {.column width="28%"}
+[![Mastering Shiny](images/mastering-shiny.png){height="500" fig-align="left" fig-alt="Book cover of Mastering Shiny book by Hadley Wickham."}](https://mastering-shiny.org/)
+:::
+
+::: {.column width="29%"}
+[![Engineering Production-Grade Shiny Apps](images/engineering-shiny.jpeg){height="500" fig-align="left" fig-alt="Book cover of Engineering Production-Grade Shiny Apps by Colin Fay, Sébastien Rochette, Vincent Guyader, and Cervan Girard."}](https://engineering-shiny.org/)
+:::
+:::
+
+## Wireframe Wishes :writing_hand: :star2:
+
+Before coding, sketch data flows and app design.
+
+::: {layout-ncol="2"}
+![](images/reactivity.png){fig-alt="Flowchart of data inputs, reactive expressions, and outputs."}
+
+![](images/wireframe2.png){fig-alt="Sketch of Shiny application layout for the Calculate Your Estimate tab."}
+:::
+
+## Construct Code :hammer_and_wrench: :computer:
+
+Prototype then refactor with custom functions.
+
+::: columns
+::: {.column width="50%"}
+![](images/help-buttons.png)
+:::
+
+::: {.column width="50%"}
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+fct_helpBtn <- function(id) {
+  shinyWidgets::actionBttn(
+    inputId = id,
+    label = NULL,
+    icon = icon("question"),
+    style = "material-circle",
+    size = "xs",
+  )
+}
+```
+:::
+:::
+
+## Elevate Experience :sparkling_heart: :dancer:
+
+Incorporate HTML, CSS, JavaScript to improve user experience.
+
+```{r}
+#| echo: true
+#| eval: false
+
+shinyjs::runjs(
+    "function onTimeout() {
+        alert('Warning: Your session will time out in 3 minutes.');
+      } ...")
+
+shinydisconnect::disconnectMessage(
+  text = "Your session timed out. Please refresh the page and try again.",
+  refresh = "Refresh")
+```
+
+::: {layout-ncol="2"}
+![](images/disconnected.png){fig-alt="Default shiny message that says disconnected from the server. Reload. The rest of the Shiny app is greyed out." width="600"}
+
+![](images/timeout.png){fig-alt="WaCSE dialog box that warns the user the shinyapps.io session will time out in 3 minutes. Another dialog box that is nicely formatted that says Your session times out. Please refresh the page and try again." width="600"}
+:::
+
+## Try using R to solve a problem, even if you don't have a CS background!
+
+There are many amazing R resources, and the [community](https://www.rfordatasci.com/) is incredibly supportive!
+
+::: {layout-ncol="2"}
+![](images/sampling.jpg){fig-alt="Jadey in waders setting up a transect with a measuring tape to measure flow in a small stream."}
+
+![](images/mai.jpg){fig-alt="Jadey's cat, Mai, sitting on her laptop that has RStudio open. The monitor next to the laptop and cat has the R Packages book by Hadley Wickham and Jenny Bryan open."}
+:::
+
+## I'd love to connect with you!
+
+<br>
+
+::: columns
+::: {.column width="45%"}
+{{< fa solid display >}} [Slides](https://rpubs.com/jadeynryan/WaCSE_2023CascadiaRConf)
+
+{{< fa code size=xl >}} [WaCSE GitHub Repo](https://github.com/WA-Department-of-Agriculture/WaCSE)
+
+{{< fa brands github size=xl >}} [jadeynryan](https://github.com/jadeynryan/)
+
+{{< fa brands linkedin size=xl >}} [linkedin.com/in/jadey-ryan](https://www.linkedin.com/in/jadey-ryan)
+
+{{< fa brands twitter size=xl >}} [\@jadeynryan](https://twitter.com/jadeynryan)
+
+{{< fa solid briefcase size=xl >}} [WA Dept. of Agriculture Webpage](https://agr.wa.gov/agscience)
+:::
+
+::: {.column width="55%"}
+[![](images/logo-wacse.png)](https://wsda.shinyapps.io/WaCSE/)
+:::
+:::
