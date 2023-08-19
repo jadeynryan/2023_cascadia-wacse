@@ -88,7 +88,7 @@ Too limited!
 
 ## Demo :movie_camera:
 
-{{< video https://www.youtube.com/embed/TG_Bhgx_e-Y title="WaCSE Demo Video" width="1400" height="700" >}}
+{{< video https://vimeo.com/855973191 title="WaCSE Demo Video" width="1400" height="700" >}}
 
 ## Study Shiny :nerd_face::books:
 
@@ -171,7 +171,7 @@ shinydisconnect::disconnectMessage(
 ![](images/timeout.png){fig-alt="WaCSE dialog box that warns the user the shinyapps.io session will time out in 3 minutes. Another dialog box that is nicely formatted that says Your session times out. Please refresh the page and try again." width="600"}
 :::
 
-## Try using R to solve a problem, even if you don't have a CS background!
+## Try a new R package or workflow to solve a problem!
 
 There are many amazing R resources, and the [community](https://www.rfordatasci.com/) is incredibly supportive!
 

@@ -4,5 +4,6 @@
 .Ruserdata
 /.quarto/
 /videos/
+/rsconnect/
 *_files/
 scrap.qmd
