@@ -187,7 +187,7 @@ There are many amazing R resources, and the [community](https://www.rfordatasci.
 
 ::: columns
 ::: {.column width="45%"}
-{{< fa solid display >}} [Slides](https://rpubs.com/jadeynryan/WaCSE_2023CascadiaRConf)
+{{< fa solid display >}} [Slides](https://jadeynryan.github.io/2023_cascadia-wacse/)
 
 {{< fa code size=xl >}} [WaCSE GitHub Repo](https://github.com/WA-Department-of-Agriculture/WaCSE)
 
