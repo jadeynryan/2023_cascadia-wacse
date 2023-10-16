@@ -10,7 +10,7 @@ format:
   revealjs:
     width: 1600
     height: 900
-    theme: "style.scss"
+    theme: style.scss
     highlight-style: gruvbox
     logo: images/logo-wsda-color.png
     footer: "[https://wsda.shinyapps.io/WaCSE/](https://wsda.shinyapps.io/WaCSE/)"

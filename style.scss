@@ -29,7 +29,7 @@ $code-block-bg: #ffffff;
 
 // bg colours
 $body-color: #17261F;
-$link-color: #558B71;
+$link-color: #7e5c0a;
 $link-color-hover: darken( $link-color, 15% );
 $body-bg: #F2F7F5;
 
@@ -45,29 +45,19 @@ figure>figcaption {
 }
 
 .reveal .footer {
-  color: #558B71;
+  color: #7e5c0a;
   font-family: $font-family-sans-serif;
-  padding-bottom: 25px;
+  font-size: 0.5em;
 }
 
-.reveal .slide-logo {
-  right: 12px;
-  padding-bottom: 20px !important;
-  max-height: 70px !important;
-  z-index: 1;
-}
 
 .reveal .slide-menu-button {
-    left: 100px;
-    top: 30px;
-    padding-left: 20px;
     color: #365949;
   }
 
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
   color: #365949;
-  height: 2%;
 }
 
 .reveal .slide-number {
